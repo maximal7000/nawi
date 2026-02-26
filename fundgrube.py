@@ -7,6 +7,7 @@ import uuid
 import io
 import pandas as pd
 from datetime import datetime
+import httpx
 
 # --- 1. SEITEN KONFIGURATION & DARKMODE ENFORCEMENT ---
 st.set_page_config(page_title="KI Fundgrube Pro", page_icon="🔍", layout="wide")
