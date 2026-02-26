@@ -1,17 +1,7 @@
-# Web-Framework
 streamlit==1.31.0
-
-# Deep Learning (Wichtig: Version 2.15 für TM-Modelle)
 tensorflow==2.15.0
 keras==2.15.0
-
-# Datenbank & Backend
 supabase==2.3.7
-
-# Bildverarbeitung & Mathe
 pillow==10.2.0
 numpy==1.26.4
 pandas==2.2.0
-
-# Hilfswerkzeuge
-httpx==0.26.0
