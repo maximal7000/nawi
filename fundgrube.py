@@ -24,8 +24,8 @@ st.markdown("""
 
 # --- 2. SUPABASE SETUP ---
 # Ersetze diese mit deinen echten Secrets/Environment Variablen
-SUPABASE_URL = st.secrets.get("SUPABASE_URL", "DEINE_URL")
-SUPABASE_KEY = st.secrets.get("SUPABASE_KEY", "DEIN_KEY")
+SUPABASE_URL = st.secrets["SUPABASE_URL"]
+SUPABASE_KEY = st.secrets["SUPABASE_KEY"]
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 # --- 3. KI MODELL FUNKTIONEN ---
