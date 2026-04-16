@@ -126,7 +126,12 @@ elif menu == "📤 Etwas melden (KI)":
                     image.save(img_byte_arr, format='JPEG')
                     
                     try:
-                        supabase.storage.from_("images").upload(file_name, img_byte_arr.getvalue())
+                        img_byte_arr.seek(0)
+                        supabase.storage.from_("images").upload(
+                            path=file_name,
+                            file=img_byte_arr.getvalue(),
+                            file_options={"content-type": "image/jpeg"}
+                        )
                         img_url = supabase.storage.from_("images").get_public_url(file_name)
 
                         # 2. Datenbank-Eintrag
