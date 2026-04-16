@@ -29,7 +29,7 @@ def init_connection():
         key = st.secrets["SUPABASE_KEY"]
         return create_client(url, key)
     except Exception as e:
-        st.error("Verbindungsfehler: Bitte prüfe, ob SUPABASE_URL und SUPABASE_KEY in den Streamlit Cloud Secrets eingetragen sind.")
+        st.error(f"Verbindungsfehler: {e}")
         st.stop()
 
 supabase = init_connection()
